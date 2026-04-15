@@ -64,7 +64,8 @@ The staging environment (or staging area) is like a waiting room for your change
 
 ### Git Workflow
 
-<img width="700" height="466" alt="git-workflow-overview" src="https://github.com/user-attachments/assets/ebe0bb5a-a4fd-47a6-910f-d8bc43e34416" />
+<img width="800" height="533" alt="git-workflow-overview" src="https://github.com/user-attachments/assets/2c1a54b9-f0cd-43c5-9093-c4753d7b5d1f" />
+
 
 -------------------------------------------------------------------------------------------------------------
 
