@@ -62,12 +62,9 @@ git config --system user.name "System Name" => System settings apply to all repo
 
 The staging environment (or staging area) is like a waiting room for your changes. You use it to tell Git exactly which files you want to include in your next commit.
 
+### Git Workflow
 
-
-
-
-
-
+<img width="700" height="466" alt="git-workflow-overview" src="https://github.com/user-attachments/assets/ebe0bb5a-a4fd-47a6-910f-d8bc43e34416" />
 
 -------------------------------------------------------------------------------------------------------------
 
