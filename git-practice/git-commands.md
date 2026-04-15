@@ -12,6 +12,10 @@ sudo apt-get upgrade git    => to upgrade the already installed version of GIT
 
 ### Config GIT
 
+mkdir (project directory)
+
+git init =>  run command inside proj dir ti initialize the git 
+
 *Git uses your name and email to label your commits*
 
 git config --global user.name "Your Name"
@@ -22,6 +26,8 @@ git config --global user.email "you@example.com"
 git config --list
 
 git config user.name    =>  view a specific settings
+
+
 
 Command	                Purpose
 
