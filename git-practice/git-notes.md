@@ -1,15 +1,22 @@
-# This File has all about the **VCS** (Version Control System).
+# GIT
 
-##    **GIT** {Global Information Tracker} 
+*Git is a popular version control system that helps teams track and manage code changes, collaborate seamlesslyand work on projects of any size. It keeps a history of every change, allowing you to revisit or restore previous versions and makes it easy to fix mistakes without losing progres.
 
-        * Used to maintain and track the code history.
-        * User can push or pull the changes to **GITHUB** 
+It was created by Linus Torvalds in 2005, and has been maintained by Junio Hamano since then.
 
-Git
 
-- History of Git
-    Git has been developed by Linus Torwald
+### Key Git Concepts
 
+Repository      =>  A folder where Git tracks your project and its history.
+Clone           =>  Make a copy of a remote repository on your computer.
+Stage           =>  Tell Git which changes you want to save next.
+Commit          =>  Save a snapshot of your staged changes.
+Branch          =>  Work on different versions or features at the same time.
+Merge           =>  Combine changes from different branches.
+Pull            =>  Get the latest changes from a remote repository.
+Push            =>  Send your changes to a remote repository.
+
+-------------------------------------------------------------------------------------------------------------
 - File System vs VCS
 - git commands (git init, git status, git add, git config, git commit, git rm)
 - Tracking a file to git
