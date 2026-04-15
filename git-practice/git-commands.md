@@ -27,6 +27,45 @@ git config --list
 
 git config user.name    =>  view a specific settings
 
+### Git Show
+
+### Git Restore
+
+### Git Clean
+
+### Git Remote Add
+
+### Git Tag 
+
+### Tracking a file
+
+### Branching 
+
+### Push/Pull {ssh / pat}
+
+### Rebash 
+
+### Merge
+
+### Stash / Stash pop
+
+### Cherry Picking
+
+### Squash commit 
+
+### Merge Commit
+
+### Reset
+
+### Revert
+
+### Branching Stratigies
+
+### GitHub CLI
+
+### Confilict Resolution
+
+### Git Ignore
 
 
 Command	                Purpose
