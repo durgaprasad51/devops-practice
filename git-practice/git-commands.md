@@ -1,9 +1,11 @@
-       **GIT Initial Setup and commands**
+     # GIT Initial Setup and commands
 
-# Initial Setup - Configure Git for first time use with your identity
+## Initial Setup - Configure Git for first time use with your identity
 
-# Set user info (required for commits)
+### Set user info (required for commits)
+
 git config --global user.name "Your Name"
+
 git config --global user.email "email@example.com"
 
 # Set default branch name
