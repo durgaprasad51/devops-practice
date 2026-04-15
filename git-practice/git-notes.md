@@ -8,12 +8,19 @@ It was created by Linus Torvalds in 2005, and has been maintained by Junio Haman
 ### Key Git Concepts
 
 Repository      =>  A folder where Git tracks your project and its history.
+
 Clone           =>  Make a copy of a remote repository on your computer.
+
 Stage           =>  Tell Git which changes you want to save next.
+
 Commit          =>  Save a snapshot of your staged changes.
+
 Branch          =>  Work on different versions or features at the same time.
+
 Merge           =>  Combine changes from different branches.
+
 Pull            =>  Get the latest changes from a remote repository.
+
 Push            =>  Send your changes to a remote repository.
 
 -------------------------------------------------------------------------------------------------------------
