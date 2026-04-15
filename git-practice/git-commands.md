@@ -1,65 +1,90 @@
-     # GIT Initial Setup and commands
+
+# GIT Initial Setup and commands
 
 ## Initial Setup - Configure Git for first time use with your identity
 
-### Set user info (required for commits)
+*Set user info (required for commits)*
 
 git config --global user.name "Your Name"
 
 git config --global user.email "email@example.com"
 
-# Set default branch name
+*Set default branch name*
+
 git config --global init.defaultBranch main
 
-# Check settings
+*Check settings*
+
 git config --list
 
 
-# Create & Clone Repositories - Start a new project or get an existing one
+## Create & Clone Repositories - Start a new project or get an existing one
 
-# Create new repository
+*Create new repository*
+
 git init
-git init <directory>
 
-# Clone existing repository
+git init <dir>
+
+*Clone existing repository*
+
 git clone <url>
+
 git clone <url> <directory>
 
-# Clone specific branch
+*Clone specific branch*
+
 git clone -b <branch> <url>
 
 
-**Making Changes**
-# Check Status & Differences - See what has changed in your working directory
+## Making Changes
 
-# Check status
+### Check Status & Differences - See what has changed in your working directory
+
+*Check status*
+
 git status
+
 git status -s  # Short format
 
-# View changes
+*View changes*
+
 git diff              # Unstaged changes
+
 git diff --staged     # Staged changes
+
 git diff HEAD         # All changes
+
 git diff <branch>     # Compare with branch
 
 # Stage & Commit Changes - Save your work to the repository history
 
-# Stage files
+*Stage files*
+
 git add <file>
+
 git add .              # All files
+
 git add -A             # All including deletions
+
 git add -p             # Interactive staging
 
-# Commit
+*Commit*
+
 git commit -m "message"
+
 git commit -am "message"  # Add + commit tracked files
+
 git commit --amend       # Modify last commit
 
-# Log & History - Explore repository history and find specific commits
+### Log & History - Explore repository history and find specific commits
 
-# View log
+*View log*
+
 git log
+
 git log --oneline
+
 git log --graph --all
 git log -n 5           # Last 5 commits
 
