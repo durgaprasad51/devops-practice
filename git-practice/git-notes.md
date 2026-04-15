@@ -23,6 +23,52 @@ Pull            =>  Get the latest changes from a remote repository.
 
 Push            =>  Send your changes to a remote repository.
 
+### GIT Config
+
+*Configuration Levels - There are three levels of configuration:
+
+System (all users): git config --system
+
+Global (current user): git config --global
+
+Local (current repo): git config --local
+
+The order of precedence is:
+
+*Local (current repo)
+
+*Global (current user)
+
+*System (all users)
+
+The reason to use the different levels is that you can set different values for different users or repositories.
+
+This can be used for example to set different default branches for different repositories and users.
+
+
+Example: Set a Local Config 
+  
+git config user.name "Project Name" => Local settings only apply to the current repository.
+
+Example: Set a Global Config
+
+git config --global user.name "Global Name" => Global settings apply to all repositories for the current user.
+
+Example: Set a System Config
+
+git config --system user.name "System Name" => System settings apply to all repositories for all users.
+
+### GIT Staging
+
+The staging environment (or staging area) is like a waiting room for your changes. You use it to tell Git exactly which files you want to include in your next commit.
+
+
+
+
+
+
+
+
 -------------------------------------------------------------------------------------------------------------
 - File System vs VCS
 - git commands (git init, git status, git add, git config, git commit, git rm)
