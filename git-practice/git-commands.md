@@ -86,72 +86,102 @@ git log
 git log --oneline
 
 git log --graph --all
+
 git log -n 5           # Last 5 commits
 
-# Search commits
+*Search commits*
+
 git log --grep="keyword"
+
 git log --author="name"
+
 git log --since="2 weeks ago"
 
-# File history
+*File history*
+
 git log -- <file>
+
 git log -p <file>      # With changes
+
 git blame <file>       # Line-by-line authorship
 
-**Stashing Changes**
-# Save Work Temporarily - Store uncommitted changes for later without committing
+## Stashing Changes
+### Save Work Temporarily - Store uncommitted changes for later without committing
 
-# Stash changes
+*Stash changes*
+
 git stash
+
 git stash push -m "description"
 
-# View stashes
+*View stashes*
+
 git stash list
 
-# Apply stash
+*Apply stash*
+
 git stash apply         # Apply latest
+
 git stash apply stash@{n}  # Apply specific
+
 git stash pop           # Apply and delete
 
-# Delete stash
+*Delete stash*
+
 git stash drop stash@{n}
+
 git stash clear         # Delete all
 
-**Branching**
-# Branch Management - Create, list, and delete branches for parallel development
+## Branching
 
-# List branches
+### Branch Management - Create, list, and delete branches for parallel development
+
+*List branches*
+
 git branch            # Local
+
 git branch -r         # Remote
+
 git branch -a         # All
 
-# Create branch
+*Create branch*
+
 git branch <name>
+
 git checkout -b <name>  # Create and switch
 
-# Switch branches
+*Switch branches*
+
 git checkout <branch>
+
 git switch <branch>     # Git 2.23+
 
-# Delete branch
+*Delete branch*
+
 git branch -d <branch>  # Safe delete
+
 git branch -D <branch>  # Force delete
 
-# Merging & Rebasing - Combine changes from different branches
+## Merging & Rebasing - Combine changes from different branches
 
-# Merge
+*Merge*
+
 git merge <branch>
+
 git merge --no-ff <branch>  # No fast-forward
 
-# Abort merge
+*Abort merge*
 git merge --abort
 
-# Rebase
+*Rebase*
+
 git rebase <branch>
 git rebase -i HEAD~3        # Interactive
 
-# Abort/continue rebase
+*Abort/continue rebase*
+
 git rebase --abort
+
 git rebase --continue
 
 **Working with Remotes**
