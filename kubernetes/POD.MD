@@ -33,7 +33,7 @@ kubectl describe pod my-nginx
 
 
 </>
-,,,
+```yaml
 apiVersion: v1           		 # API version for Pods
 kind: Pod                 		 # Resource type   
 
@@ -57,8 +57,17 @@ spec:
         memory: "128Mi"
           cpu:"500m"  
 
-,,,
+```
 **apply it** =>  kubectl apply -f pod.yaml
 
 
- 
+ ```yaml
+version: "3"
+services:
+  app:
+    image: my-app
+    ports:
+      - "8080:80"  # maps port 8080 to 80
+    environment:
+      - DEBUG=true  # enable debug mode
+```
