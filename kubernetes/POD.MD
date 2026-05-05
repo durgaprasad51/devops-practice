@@ -16,3 +16,8 @@ spec:
       ports:
       - containerPort: 80
 
+title: My Project
+description: A brief description of my project
+auth:
+  role: developer
+  name: John Doe
