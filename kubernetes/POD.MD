@@ -3,6 +3,7 @@
 
 ### Example of a POD manifest file
 
+
 kind: Pod
 apiVersion: v1
 
