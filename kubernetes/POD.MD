@@ -20,13 +20,13 @@ Abstraction — Pods provide a runtime-agnostic interface (works with containerd
 
 ### Using kubectl (Imperative)
 ```
-### Run a single Pod
+# Run a single Pod
 kubectl run my-nginx --image=nginx --port=80
 
-### Check the Pod
+# Check the Pod
 kubectl get pods
 
-### Get detailed info
+# Get detailed info
 kubectl describe pod my-nginx
 ```
 
