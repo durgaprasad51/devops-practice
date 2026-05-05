@@ -58,4 +58,64 @@ spec:
 ```
 **apply it** =>  kubectl apply -f pod.yaml
 
+**Pod Lifecycle**
+```
+A Pod goes through several phases during its lifetime:
+
+Pending	=> Pod accepted by the cluster but containers not yet running. Could be waiting for scheduling or image pull.
+Running	=> Pod bound to a node. At least one container is running.
+Succeeded => All containers terminated successfully (exit code 0). Won’t restart.
+Failed	=> All containers terminated. At least one exited with a non-zero code.
+Unknown	=> Pod status can’t be determined (usually a node communication issue).
+```
+
+###
+
+```
+kubectl get pods
+kubectl get pod my-nginx -o wide    # Shows node, IP, etc.
+```
+### Working with pod
+
+```
+# View logs
+kubectl logs my-nginx
+
+# Follow logs in real-time
+kubectl logs -f my-nginx
+
+# View logs for a specific container (multi-container Pod)
+kubectl logs my-nginx -c nginx
+```
+### Execute Commands inside a pod
+```
+# Open a shell
+kubectl exec -it my-nginx -- /bin/bash
+
+# Run a single command
+kubectl exec my-nginx -- ls /usr/share/nginx/html
+
+# For multi-container Pods, specify the container
+kubectl exec -it my-nginx -c nginx -- /bin/bash
+```
+### Port forwarding
+
+```
+# Forward local port 8080 to Pod port 80
+kubectl port-forward my-nginx 8080:80
+
+# Now visit http://localhost:8080 in your browser
+```
+### Delete a Pod
+```
+# Delete by name
+kubectl delete pod my-nginx
+
+# Delete using the YAML file
+kubectl delete -f pod.yaml
+```
+
+
+
+
 
