@@ -31,7 +31,7 @@ kubectl describe pod my-nginx
 
 ### Example of a POD manifest file
 
-```yaml
+```
 apiVersion: v1           		 # API version for Pods
 kind: Pod                 		 # Resource type   
 
