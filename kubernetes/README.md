@@ -2,6 +2,57 @@
 
 ### Kubernetes History
 
+2003-2004	Google develops Borg for internal cluster management
+2013	Google builds Omega, an improved successor to Borg
+June 2014	Kubernetes is announced by Google at DockerCon
+July 2015	Kubernetes v1.0 is released; Google donates K8s to the newly formed Cloud Native Computing Foundation (CNCF)
+2016	Kubernetes wins the container orchestration war against Docker Swarm and Apache Mesos
+2017	All major cloud providers launch managed Kubernetes services — Amazon EKS, Azure AKS, Google GKE
+March 2018	Kubernetes becomes the first CNCF project to graduate, signaling production maturity
+2019	Docker Enterprise itself adopts Kubernetes as its default orchestrator
+2020	Kubernetes deprecates Docker as a container runtime (in favor of containerd/CRI-O)
+2021-2023	Kubernetes matures with stable APIs, Gateway API, and a massive ecosystem
+2024-2025	Focus shifts to security, eBPF-based networking, AI/ML workloads, and Wasm support
+
+### Kubernetes wasn’t the only game in town. Three major platforms competed for dominance
+
+**Docker Swarm**
+Docker’s built-in orchestration tool. Simple to set up but lacked the advanced features enterprises needed — auto-scaling, rolling updates, and robust networking.
+
+**Apache Mesos**
+A powerful distributed systems kernel that could run containers, but was complex to operate and had a steeper learning curve.
+
+**Kubernete**
+Google’s entry brought battle-tested patterns from Borg, a declarative API model, an extensible architecture, and — crucially — a vibrant open-source community.
+
+By 2017, the war was effectively over. Kubernetes won because of:
+
+Community — CNCF governance attracted contributions from every major tech company
+Extensibility — Custom Resource Definitions (CRDs) let anyone extend K8s
+Cloud adoption — Every cloud provider offered managed Kubernetes
+Enterprise backing — Red Hat, VMware, Microsoft, and others invested heavily
+The CNCF and the Cloud-Native Ecosystem
+When Google donated Kubernetes to the Cloud Native Computing Foundation (CNCF) in 2015, it was a strategic move to ensure Kubernetes remained vendor-neutral. The CNCF, part of the Linux Foundation, now oversees a massive ecosystem of cloud-native projects:
+
+Prometheus — Monitoring
+Envoy — Service proxy
+Helm — Package management
+Istio — Service mesh
+Argo — GitOps and workflows
+containerd — Container runtime
+Kubernetes is the gravitational center of this ecosystem.
+
+Why This History Matters
+Understanding Kubernetes’ origins helps you recognize:
+
+It’s designed for scale — Born from systems running billions of containers
+Declarative model — You tell K8s what you want, not how to do it
+Self-healing — Automatic restarts, rescheduling, and replication come from Borg’s DNA
+Extensibility — The API-first design lets you build anything on top of K8s
+Community-driven — No single vendor controls Kubernetes
+
+**Kubernetes, also known as k8s or kube, is an open source container orchestration platform for scheduling and automating the deployment, management and scaling of containerized applications**
+
 ---
 
 ### Draw the Kubernetes Architecture
