@@ -25,15 +25,7 @@ A powerful distributed systems kernel that could run containers, but was complex
 **Kubernete**
 Google’s entry brought battle-tested patterns from Borg, a declarative API model, an extensible architecture, and — crucially — a vibrant open-source community.
 
-By 2017, the war was effectively over. Kubernetes won because of:
-
-Community — CNCF governance attracted contributions from every major tech company
-Extensibility — Custom Resource Definitions (CRDs) let anyone extend K8s
-Cloud adoption — Every cloud provider offered managed Kubernetes
-Enterprise backing — Red Hat, VMware, Microsoft, and others invested heavily
-The CNCF and the Cloud-Native Ecosystem
-When Google donated Kubernetes to the Cloud Native Computing Foundation (CNCF) in 2015, it was a strategic move to ensure Kubernetes remained vendor-neutral. The CNCF, part of the Linux Foundation, now oversees a massive ecosystem of cloud-native projects:
-
+### The CNCF, part of the Linux Foundation, now oversees a massive ecosystem of cloud-native projects:
 Prometheus — Monitoring
 Envoy — Service proxy
 Helm — Package management
@@ -42,7 +34,7 @@ Argo — GitOps and workflows
 containerd — Container runtime
 Kubernetes is the gravitational center of this ecosystem.
 
-Why This History Matters
+### Why This History Matters
 Understanding Kubernetes’ origins helps you recognize:
 
 It’s designed for scale — Born from systems running billions of containers
@@ -57,7 +49,6 @@ Community-driven — No single vendor controls Kubernetes
 
 ### Draw the Kubernetes Architecture
 
-
 **Control Plane (Master Node):**
 - API Server — the front door to the cluster, every command goes through it
 - etcd — the database that stores all cluster state
@@ -69,12 +60,12 @@ Community-driven — No single vendor controls Kubernetes
 - kube-proxy — handles networking rules so pods can communicate
 - Container Runtime — the engine that actually runs containers (containerd, CRI-O)
 es down?
-
 ---
 
 ### Install kubectl
 
-# Linux (amd64)
+**Linux (amd64)**
+
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 chmod +x kubectl
 sudo mv kubectl /usr/local/bin/
@@ -82,57 +73,55 @@ sudo mv kubectl /usr/local/bin/
 ---
 
 ** kind (Kubernetes in Docker)**
-```bash
-# Install kind
-# macOS
-brew install kind
 
-# Linux
+### Install kind
+
+**Linux**
 curl -Lo ./kind https://kind.sigs.k8s.io/dl/latest/kind-linux-amd64
 chmod +x ./kind
 sudo mv ./kind /usr/local/bin/kind
 
-# Create a cluster
+### Create a cluster
 kind create cluster --name devops-cluster
 
-# Verify
+### Verify
 kubectl cluster-info
 kubectl get nodes
-```
+
 
 **Option B: minikube**
-```bash
-# Install minikube
 
-# Linux
+### Install minikube
+
+**Linux**
+
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 sudo install minikube-linux-amd64 /usr/local/bin/minikube
 
-# Start a cluster
+### Start a cluster
 minikube start
 
-# Verify
+### Verify
 kubectl cluster-info
 kubectl get nodes
-```
 ---
 
 ### Explore Your Cluster
 
 
-# See cluster info
+### See cluster info
 kubectl cluster-info
 
-# List all nodes
+### List all nodes
 kubectl get nodes
 
-# Get detailed info about your node
+### Get detailed info about your node
 kubectl describe node <node-name>
 
-# List all namespaces
+### List all namespaces
 kubectl get namespaces
 
-# See ALL pods running in the cluster (across all namespaces)
+### See ALL pods running in the cluster (across all namespaces)
 kubectl get pods -A
 
 Look at the pods running in the `kube-system` namespace:
