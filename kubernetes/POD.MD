@@ -8,19 +8,6 @@ One or more containers (usually one)
 Shared networking — all containers in a Pod share the same IP address and port space
 Shared storage — containers can mount the same volumes
 Lifecycle — containers in a Pod are co-scheduled and co-located
-Think of a Pod as a “logical host” — similar to a physical or virtual machine, but lighter.
-
-┌─────────────── Pod ───────────────┐
-│                                    │
-│  ┌────────────┐  ┌────────────┐  │
-│  │ Container  │  │ Container  │  │
-│  │  (main)    │  │  (sidecar) │  │
-│  └────────────┘  └────────────┘  │
-│                                    │
-│  Shared Network (localhost)        │
-│  Shared Volumes                    │
-│  IP: 10.244.0.5                    │
-└────────────────────────────────────┘
 
 ### Why Pods and Not Just Containers?
 
@@ -31,9 +18,7 @@ Shared resources — Containers in a Pod can communicate via localhost and share
 Atomic scheduling — K8s schedules the entire Pod as a unit, not individual containers
 Abstraction — Pods provide a runtime-agnostic interface (works with containerd, CRI-O, etc.)
 
-
-
-Using kubectl (Imperative)
+### Using kubectl (Imperative)
 # Run a single Pod
 kubectl run my-nginx --image=nginx --port=80
 
@@ -47,30 +32,32 @@ kubectl describe pod my-nginx
 ### Example of a POD manifest file
 
 
-
-apiVersion: v1            # API version for Pods
-kind: Pod                 # Resource type   
+</>
+,,,
+apiVersion: v1           		 # API version for Pods
+kind: Pod                 		 # Resource type   
 
 metadata: 
-    name: nginx           # Pod name (must be unique in the namespace) 
-    labels:               # Key-value pairs for organizing and selecting 
+    name: nginx           		 # Pod name (must be unique in the namespace) 
+    labels:           			 # Key-value pairs for organizing and selecting 
       app: nginx
       environment: dev
 
 spec: 
-    containers:             # List of containers in this Pod
-    - name: nginx           # Container name 
-      image: nginx:latest    # Container image 
+    containers:             		# List of containers in this Pod
+    - name: nginx           		# Container name 
+      image: nginx:latest    		# Container image 
       ports:
-      - containerPort: 80    # Port the container listens on
+      - containerPort: 80    		# Port the container listens on
       resources:
-        requests:            # Minimum resources guaranteed
+        requests:            		# Minimum resources guaranteed
           memory: "64Mi"
           cpu: "250m"  
-      limits:                 # Maximum resources allowed
+      limits:                 		# Maximum resources allowed
         memory: "128Mi"
           cpu:"500m"  
 
+,,,
 **apply it** =>  kubectl apply -f pod.yaml
 
 
