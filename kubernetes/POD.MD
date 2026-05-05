@@ -15,3 +15,4 @@ spec:
       image: nginx:latest
       ports:
       - containerPort: 80
+
