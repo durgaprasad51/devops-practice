@@ -31,8 +31,6 @@ kubectl describe pod my-nginx
 
 ### Example of a POD manifest file
 
-
-</>
 ```yaml
 apiVersion: v1           		 # API version for Pods
 kind: Pod                 		 # Resource type   
@@ -56,18 +54,7 @@ spec:
       limits:                 		# Maximum resources allowed
         memory: "128Mi"
           cpu:"500m"  
-
 ```
 **apply it** =>  kubectl apply -f pod.yaml
 
 
- ```yaml
-version: "3"
-services:
-  app:
-    image: my-app
-    ports:
-      - "8080:80"  # maps port 8080 to 80
-    environment:
-      - DEBUG=true  # enable debug mode
-```
